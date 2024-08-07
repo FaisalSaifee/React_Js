@@ -1,0 +1,30 @@
+1. What is hoisting in US?
+2. How does it work?
+3. What is the difference between let and var?
+4. What is the Event Loop?
+5. What is precedence in the Event Loop?
+6. What is the difference between setTimeout and setInterval?
+7. Where do you use the Rest Operator?
+8. Have you heard of array.reverse?
+9. What is meant by Shallow copy and Deep copy?
+10. What are Closures?
+11. Have you used the reduce function in JS?
+12. What is the difference between map and reduce?
+13. What parameters does the map function accept?
+14. What is the difference between a Promise and a Callback?
+15. What position attributes in CSS have you used?
+16. What is the difference between them?
+17. What is Flexbox?
+18. What is the difference between display=none and visibility=hidden?
+19. What Hooks have you used?
+20. What is the purpose of useCallback?
+21. What are Class-based Lifecycle methods?
+22. How can you achieve componentDidMount, componentDidUpdate & componentDidUnMount in a functional-based component?
+23. What are Pure Components and their purpose?
+24. What are Higher Order components?
+25. What HOCs have you used?
+26. Have you used the Context API?
+27. You already have state management in React, so why go for Redux?
+28. How does Redux work?
+29. Have you used any Middlewares?
+30. What is the purpose of using middlewares?
