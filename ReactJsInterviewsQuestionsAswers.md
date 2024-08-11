@@ -1,11 +1,11 @@
 # How to pass value from child component to parent component
-# What is a callback function?
+## What is a callback function?
 
-# Callback Function in React
+## Callback Function in React
 
 A callback function in React is a function that is passed as a prop from a parent component to a child component. It is typically used to allow the child component to communicate with the parent component. This pattern is particularly useful when you want to pass data or trigger actions in the parent component based on events that happen in the child component.
 
-## Key Points About Callback Functions in React
+### Key Points About Callback Functions in React
 
 1. **Defined in the Parent Component**:
    - The callback function is usually defined in the parent component. This function will do something in the parent component, like updating state or logging data.
@@ -16,9 +16,9 @@ A callback function in React is a function that is passed as a prop from a paren
 3. **Called in the Child Component**:
    - The child component can call the callback function, typically in response to some user interaction (e.g., a button click). When called, the callback function can pass data back to the parent component.
 
-## Example of a Callback Function in React
+### Example of a Callback Function in React
 
-### Parent Component:
+#### Parent Component:
 ```jsx
 import React, { useState } from 'react';
 
@@ -41,7 +41,7 @@ function ParentComponent() {
 }
 ```
 
-### Child Component:
+#### Child Component:
 ```jsx
 import React from 'react';
 
@@ -62,7 +62,7 @@ function ChildComponent({ onMessageChange }) {
 export default ParentComponent;
 ```
 
-## How It Works
+### How It Works
 
 1. **Defining the Callback**:
    - The `ParentComponent` defines a callback function `handleMessageChange` that updates the parent's state.
@@ -76,7 +76,7 @@ export default ParentComponent;
 4. **Parent Reacts to Child**:
    - The parent component receives this message and updates its state, which then updates the UI to display the new message.
 
-## Why Use Callback Functions in React?
+### Why Use Callback Functions in React?
 
 - **Communication**: They allow child components to communicate with parent components, enabling a flow of data in both directions (parent to child via props, and child to parent via callbacks).
   
