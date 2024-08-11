@@ -1,7 +1,6 @@
 # How to pass value from child component to parent component
-## What is a callback function?
-
-## Callback Function in React
+### What is a callback function?
+### Callback Function in React
 
 A callback function in React is a function that is passed as a prop from a parent component to a child component. It is typically used to allow the child component to communicate with the parent component. This pattern is particularly useful when you want to pass data or trigger actions in the parent component based on events that happen in the child component.
 
