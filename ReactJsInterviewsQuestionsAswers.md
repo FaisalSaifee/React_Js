@@ -82,3 +82,10 @@ export default ParentComponent;
 - **State Management**: Callback functions help in lifting state up to a common ancestor when multiple components need to share and update the same piece of state.
 
 - **Modularity**: They promote modular and reusable code by separating concerns between components while still enabling interaction between them.
+
+
+# New components in HTML5
+
+# Postgred sql versioning
+
+# ACID properties of Database
