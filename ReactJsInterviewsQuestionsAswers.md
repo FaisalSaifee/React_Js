@@ -89,3 +89,26 @@ export default ParentComponent;
 # Postgred sql versioning
 
 # ACID properties of Database
+
+# SOLID Architecure
+
+# React JS
+
+# Next JS
+
+# React Redux
+
+# Formik
+
+# React Query
+
+# React Virtrualized
+
+# React Spring
+
+# React Testing Library
+
+# TypeScript
+
+# React Nativ
+
