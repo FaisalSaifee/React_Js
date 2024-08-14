@@ -179,9 +179,113 @@ function App() {
 In React development, understanding hoisting is crucial for writing predictable and bug-free code, especially when dealing with variable scopes, function declarations, and the proper use of hooks.
 
 
+# Differences Between `let` and `var` in JavaScript
 
-2. How does it work?
-3. What is the difference between let and var?
+In JavaScript, `let` and `var` are both used to declare variables, but they have some important differences in behavior and scope. Here’s a breakdown of the key differences:
+
+### 1. Scope
+
+- **`var`**:
+  - `var` is function-scoped. This means that a variable declared with `var` is available within the function where it is declared, or globally if declared outside any function.
+  - Example:
+    ```javascript
+    function testVar() {
+        var x = 1;
+        if (true) {
+            var x = 2;  // Same variable as above
+            console.log(x);  // 2
+        }
+        console.log(x);  // 2
+    }
+    testVar();
+    ```
+  - Here, the `x` variable inside the `if` block is the same as the `x` variable outside, because `var` is function-scoped.
+
+- **`let`**:
+  - `let` is block-scoped. This means that a variable declared with `let` is only available within the block (enclosed by `{}`) where it is declared.
+  - Example:
+    ```javascript
+    function testLet() {
+        let y = 1;
+        if (true) {
+            let y = 2;  // Different variable from the one outside
+            console.log(y);  // 2
+        }
+        console.log(y);  // 1
+    }
+    testLet();
+    ```
+  - Here, the `y` variable inside the `if` block is a different variable from the `y` variable outside because `let` is block-scoped.
+
+### 2. Hoisting
+
+- **`var`**:
+  - Variables declared with `var` are hoisted to the top of their scope and are initialized with `undefined`. This means you can reference them before their declaration, but they will have the value `undefined`.
+  - Example:
+    ```javascript
+    console.log(z);  // undefined
+    var z = 10;
+    console.log(z);  // 10
+    ```
+
+- **`let`**:
+  - Variables declared with `let` are also hoisted, but they are not initialized. If you try to reference them before their declaration, you’ll get a `ReferenceError` due to the "temporal dead zone."
+  - Example:
+    ```javascript
+    console.log(a);  // ReferenceError: Cannot access 'a' before initialization
+    let a = 10;
+    console.log(a);  // 10
+    ```
+
+### 3. Re-declaration
+
+- **`var`**:
+  - You can re-declare a variable using `var` within the same scope without any error.
+  - Example:
+    ```javascript
+    var b = 1;
+    var b = 2;  // No error
+    console.log(b);  // 2
+    ```
+
+- **`let`**:
+  - You cannot re-declare a variable using `let` within the same scope. Doing so will result in a syntax error.
+  - Example:
+    ```javascript
+    let c = 1;
+    let c = 2;  // SyntaxError: Identifier 'c' has already been declared
+    ```
+
+### 4. Global Object Property
+
+- **`var`**:
+  - When `var` is used to declare a global variable, it becomes a property of the global object (`window` in browsers).
+  - Example:
+    ```javascript
+    var d = "hello";
+    console.log(window.d);  // "hello"
+    ```
+
+- **`let`**:
+  - Variables declared with `let` do not create a property on the global object.
+  - Example:
+    ```javascript
+    let e = "world";
+    console.log(window.e);  // undefined
+    ```
+
+### Summary
+
+- **Scope**: `var` is function-scoped, while `let` is block-scoped.
+- **Hoisting**: `var` is hoisted and initialized with `undefined`, while `let` is hoisted but not initialized, leading to a temporal dead zone.
+- **Re-declaration**: `var` allows re-declaration within the same scope, while `let` does not.
+- **Global Object**: `var` creates a property on the global object when declared globally, while `let` does not.
+
+These differences make `let` the preferred choice for variable declaration in modern JavaScript, especially in situations where block-scoping and avoiding accidental re-declaration are important.
+
+
+
+
 4. What is the Event Loop?
 5. What is precedence in the Event Loop?
 6. What is the difference between setTimeout and setInterval?
