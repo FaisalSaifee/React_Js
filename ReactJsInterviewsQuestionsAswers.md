@@ -241,5 +241,27 @@ In React development, understanding hoisting is crucial for writing predictable 
 
 # React Nativ
 
+# JavaScript on array
+Reverse an array
+Sum of All Elements
+Find the largest number
+Remove Duplicates
+Check if Array is sorted
+Merge two arrays
+Find intersection of two arrays
+Rotate and Array
+Find the Index of an element
+Flatten a Multi Dimention array
+Count occurrences of an element
+Find all pairs with a given sum
+Remove a specific element
+Find the second largest number
+Chunk an Array
+Sort an Array of Objects
+Find Missing Number in an Array
+Group Elements by property
+Remove Falsy Values
+Partition an Array
+
 
 
