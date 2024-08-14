@@ -85,13 +85,13 @@ export default ParentComponent;
 
 
 # What is hoisting in react js and how does it works?
-## What is Hoisting?
+### What is Hoisting?
 
 **Hoisting** in JavaScript refers to the behavior where variable and function declarations are moved ("hoisted") to the top of their containing scope (either the function scope or global scope) during the compile phase, before the code is executed. This means that you can use variables and functions before they are declared in the code.
 
-## How Hoisting Works in JavaScript
+### How Hoisting Works in JavaScript
 
-### 1. Function Declarations
+#### 1. Function Declarations
 Functions declared using the `function` keyword are fully hoisted. This means that you can call the function before it is actually defined in the code.
 
 **Example:**
@@ -106,7 +106,7 @@ function sayHello() {
 
 - This code works because the `sayHello` function is hoisted to the top of its scope.
 
-### 2. Variable Declarations
+#### 2. Variable Declarations
 - Variables declared using `var` are hoisted, but their initialization is not hoisted. This means the declaration is hoisted to the top, but the assignment remains in place.
 
 **Example:**
@@ -128,11 +128,11 @@ console.log(age); // ReferenceError: Cannot access 'age' before initialization
 let age = 30;
 ```
 
-## Hoisting in React JS
+### Hoisting in React JS
 
 In the context of **React**, hoisting behaves the same way as it does in vanilla JavaScript because React is built on top of JavaScript. However, understanding hoisting is crucial for working with state, hooks, and functions in React.
 
-### Example 1: Hoisting with Functional Components
+#### Example 1: Hoisting with Functional Components
 
 In React, functional components are just JavaScript functions. Hoisting applies to them in the same way as it does to regular functions.
 
@@ -157,7 +157,7 @@ function Content() {
 
 - Here, both `Header` and `Content` components can be used before their declarations because they are hoisted.
 
-### Example 2: Hoisting with Hooks
+#### Example 2: Hoisting with Hooks
 
 When working with hooks like `useState` or `useEffect`, the rules of hoisting can impact how and when these hooks are called.
 
@@ -170,7 +170,7 @@ function App() {
 
 - While the declaration of `counter` and `setCounter` would normally be hoisted, you must call hooks like `useState` at the top level of your component function, not conditionally or inside loops, to maintain the integrity of the hook's execution order.
 
-## Key Takeaways
+### Key Takeaways
 - **Function Declarations**: Can be called before they are defined due to hoisting.
 - **`var` Declarations**: Are hoisted, but only the declaration, not the initialization.
 - **`let` and `const` Declarations**: Are hoisted but result in a "temporal dead zone" where accessing the variable before initialization results in a `ReferenceError`.
